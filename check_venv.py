@@ -1,3 +1,5 @@
+"""Check whether the script is running inside a virtual environment."""
+
 import sys
 
 if sys.prefix != sys.base_prefix:
