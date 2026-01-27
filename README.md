@@ -35,6 +35,12 @@ This repository contains a set of introductory Python exercises completed as par
   - Writing code in VS Code
   - Automatic formatting with autopep8 on save
   - Running the script in the integrated terminal
+ 
+### 7. Mutable vs Immutable Data Types
+- Explored how Python handles mutable and immutable data types
+- Observed object identity changes using `id()`
+- Compared reassignment behavior for immutable types (string, int, float, tuple, range, bool)
+- Discussed how immutability affects memory usage and variable references
 
 ## Tools and Technologies
 - Python
