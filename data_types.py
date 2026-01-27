@@ -22,7 +22,7 @@ print(type(Y))  # <class 'str'>
 Y = 8.9
 print(type(Y))  # <class 'float'>
 
-# Immutable Data Types - str, int, float, tuple, range
+# Immutable Data Types - str, int, float, tuple, range, bool
 # Strings:
 print("Immutable data types:")
 print("Strings:")
@@ -92,5 +92,14 @@ for i in range(1, 10, 2):
     print("Printing range from 1 to 10 with step 2", i)  # 1, 3, 5, 7, 9
 numbers = range(1, 20)
 print(id(numbers))  # 2551409042720 - new ID assigned
+
+# Booleans:
+print("Booleans:")
+X = True
+print(type(X))  # <class 'bool'>
+print(id(X))  # 140707501099776
+X = False
+print(type(X))  # <class 'bool'>
+print(id(X))  # 140707501099808 - new ID assigned
 
 # Mutable Data Types - lists, disctionaries, sets
