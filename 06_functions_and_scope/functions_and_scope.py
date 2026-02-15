@@ -4,8 +4,6 @@
 # Instead of repeating the same code many times, we define it once and call it whenever we need it.
 
 # Example without a function (repetition):
-from copyreg import pickle
-
 
 print("Greetings user!!!")
 print("Greetings user!!!")
