@@ -1090,6 +1090,8 @@ print(professor1.get_role())
 
 # ! Abstraction
 
+# ! ------------------------------------------------------------------------------------------------
+
 # ? Abstraction is the process of hiding the implementation details and showing only the
 # ? functionality to the user. The user can focus on what the object does instead of how it does it.
 
@@ -1215,7 +1217,10 @@ d1.area_of_circle(5)
 
 # ! ------------------------------------------------------------------------------------------------
 
-# ! Encapsulation:
+# ! ENCAPSULATION
+
+# ! ------------------------------------------------------------------------------------------------
+
 # ? Encapsulation is the process of hiding the internal details of an object and only exposing
 # ? a public interface to the user. This is done to protect the data and methods of the object from
 # ? being accessed or modified by outside code.
