@@ -154,6 +154,10 @@ s1.instance_method()
 # ? itself. They are defined using the @classmethod decorator. Class methods can access and modify
 # ? class attributes, but they cannot access instance attributes directly.
 
+# ? ------------------------------------------------------------------------------------------------
+
+# ? Example 1: Using a class method to access a class attribute.
+
 
 class Individual2:
     school = "ABC School"  # Class attribute (shared across all instances)
@@ -221,6 +225,56 @@ print(Individual2.school)    # ? Output: WER School (class attribute)
 
 # Class attribute remains unchanged
 print(Individual2.school)  # ? Output: WER School
+
+# ? ------------------------------------------------------------------------------------------------
+
+# ? Example 2: Using an instance method that accidentally shadows a class attribute.
+
+
+class Emp:
+    company = "Infosys"  # Class attribute
+
+    def company_change(self, name):
+        self.company = name  # Instance attribute that shadows the class attribute
+
+
+e1 = Emp()  # Create an instance of the Emp class
+e2 = Emp()  # Create another instance of the Emp class
+
+e1.company_change("TCS")
+print(e1.company)  # ? Output: TCS (instance attribute)
+print(e2.company)  # ? Output: Infosys (class attribute remains unchanged)
+print(Emp.company)  # ? Output: Infosys (class attribute remains unchanged)
+
+# This example shows how an instance method can create an instance attribute that shadows the class
+# attribute without modifying it.
+
+# ? ------------------------------------------------------------------------------------------------
+
+# ? Example 3: Better way to change the company for all instances using a class method.
+
+
+class Emp2:
+    company = "Infosys"  # Class attribute
+
+    @classmethod  # Class method to change the company for all instances
+    def company_change(cls, name):
+        cls.company = name  # Class attribute is modified
+
+
+e1 = Emp2()  # Create an instance of the Emp class
+e2 = Emp2()  # Create another instance of the Emp class
+
+Emp2.company_change("TCS")
+
+print(e1.company)
+print(e2.company)
+print(Emp2.company)
+
+# ? Output:
+# ? TCS
+# ? TCS
+# ? TCS
 
 # ? ------------------------------------------------------------------------------------------------
 
