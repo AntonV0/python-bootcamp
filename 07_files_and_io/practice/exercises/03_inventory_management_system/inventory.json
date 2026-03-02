@@ -1,0 +1,10 @@
+{
+    "Apple": {
+        "quantity": 10,
+        "price": 0.5
+    },
+    "Banana": {
+        "quantity": 20,
+        "price": 0.3
+    }
+}
