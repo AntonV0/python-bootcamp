@@ -29,10 +29,6 @@ This folder contains exercises, lab work, and assignments for the Files and I/O 
 
 Create a simple command-line contact book application. The application should store contact information (name, phone number, email) in a text file named `contacts.txt`. The program should have options to add a new contact, view all contacts, and search for a contact by name. Ensure all data is saved persistently.
 
-**Team Lab: Data Analysis Report Generator**
-
-In a team of 3, create a program that analyzes data from a given CSV file (provided by the instructor). The program should read the data, perform two different types of analysis (e.g., finding the maximum value in a column, counting occurrences of a specific string), and then generate a report in a new text file detailing the results of the analysis. Each team member should be responsible for a specific part of the program (e.g., file reading, data analysis, report writing).
-
 ## Assignment
 
 Develop a Python script that processes a large log file (`server.log`).
