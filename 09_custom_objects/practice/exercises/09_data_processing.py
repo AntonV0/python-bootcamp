@@ -12,9 +12,10 @@ class Employee:
         self.salary = salary
 
     @classmethod
-    def create_employee_object(cls, name, employee_id, salary):
-        """Create employee objects from a CSV file."""
-        return cls(name, employee_id, salary)
+    def from_csv_row(cls, row):
+        """Create an Employee object from a CSV row."""
+        name, employee_id, salary = row.split(",")
+        return cls(name, int(employee_id), int(salary))
 
     def __str__(self):  # Define the string representation of the object for better output
         return f"Employee(ID: {self.employee_id}, Name: {self.name}, Salary: £{self.salary})"
@@ -31,13 +32,8 @@ if __name__ == "__main__":
     lines = data.strip().split("\n")[1:]  # Skip the header line
     employees = []  # List to hold Employee objects
     for line in lines:
-        # Split the line into components
-        name, employee_id, salary = line.split(",")
-        employee_id = int(employee_id)  # Convert employee_id to an integer
-        salary = int(salary)  # Convert salary to an integer
-
         # Create an Employee object using the class method and add it to the list
-        employee = Employee.create_employee_object(name, employee_id, salary)
+        employee = Employee.from_csv_row(line)
         employees.append(employee)
     for emp in employees:
         print(emp)  # Print the Employee objects
